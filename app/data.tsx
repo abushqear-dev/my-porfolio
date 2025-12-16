@@ -9,7 +9,7 @@ export const personalInfo = {
     linkedin: "https://www.linkedin.com/in/abushqear-dev/",
     github: "https://github.com/abushqear-dev"
   },
-  version: "1.0.0" // Update this manually or via scripts
+  version: "1.0.0"
 };
 
 export const projects = [
