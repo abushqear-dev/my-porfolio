@@ -1,68 +1,69 @@
-# Mohammed Abu-Shqear | Full-Stack Developer Portfolio
+# Mohammed Abu-Shqear - Portfolio
 
-A modern, responsive, and minimalist portfolio website built with **Next.js 15** and **Tailwind CSS**. Designed to showcase professional experience, projects, and skills with a clean split-screen layout.
+Welcome to my personal portfolio source code! This project is a showcase of my skills as a Full-Stack Developer, built with a focus on clean architecture, performance, and best practices.
 
-![Portfolio Screenshot](public/my-photo.jpeg)
-_(Note: Replace this path with a screenshot of the actual website if available later)_
-
-## 🚀 Tech Stack
+## 🚀 Built With
 
 - **Framework:** [Next.js 15](https://nextjs.org/) (App Router)
-- **Styling:** [Tailwind CSS 3.4](https://tailwindcss.com/)
-- **Font:** [IBM Plex Mono](https://fonts.google.com/specimen/IBM+Plex+Mono) & [IBM Plex Sans](https://fonts.google.com/specimen/IBM+Plex+Sans)
-- **Deployment:** Vercel (Recommended)
+- **Language:** [TypeScript](https://www.typescriptlang.org/) for type safety.
+- **Styling:** [Tailwind CSS](https://tailwindcss.com/) for utility-first responsive design.
+- **Font:** [IBM Plex Mono](https://fonts.google.com/specimen/IBM+Plex+Mono) & Sans.
+
+## 🛠️ Engineering Highlights
+
+This isn't just a static template. It's engineered to be scalable and maintainable:
+
+1.  **Separation of Concerns:**
+
+    - Content is decoupled from UI components.
+    - All personal data lives in `app/data.tsx`, making updates instant without touching JSX.
+
+2.  **Optimized Performance:**
+
+    - Zero client-side JavaScript for static content (Server Components by default).
+    - Fonts are optimized using `next/font` with CSS variables to prevent layout shift.
+
+3.  **Responsive Design:**
+    - Fluid layout that transforms from a single column (Mobile) to a split-screen dashboard (Desktop).
 
 ## 📂 Project Structure
 
-This project follows a clean separation of concerns:
-
-- `app/page.tsx`: The main UI structure (Layout & Presentation).
-- `app/data.tsx`: **Content Source**. Edit this file to update the Bio, Projects, and Experience.
-- `app/layout.tsx`: Global configurations (Fonts, Metadata, CSS Variables).
-- `app/globals.css`: Global styles and Tailwind utilities.
-
-## 🛠️ Getting Started
-
-### 1. Clone the repository
-
 ```bash
-git clone https://github.com/abushqear-dev/my-portfolio.git
-cd my-portfolio
+├── app/
+│   ├── data.tsx        # Single source of truth for Bio, Projects, and Experience
+│   ├── layout.tsx      # Global font and metadata configuration
+│   ├── page.tsx        # Main UI rendering engine
+│   └── globals.css     # Tailored utilities (e.g., scrollbar hiding)
+├── public/             # Static assets (Images)
+└── README.md           # You are here
 ```
 
-### 2. Install Dependencies
+## 🏃‍♂️ Getting Started
 
-```bash
-npm install
-# or
-yarn install
-```
+Want to run this locally?
 
-### 3. Run the Development Server
+1.  **Clone the repo:**
 
-```bash
-npm run dev
-```
+    ```bash
+    git clone https://github.com/abushqear-dev/my-portfolio.git
+    cd my-portfolio
+    ```
+
+2.  **Install dependencies:**
+
+    ```bash
+    npm install
+    ```
+
+3.  **Run the development server:**
+    ```bash
+    npm run dev
+    ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## 📝 How to Edit Content
+## � Contact
 
-You don't need to dig into HTML/JSX to change your info.
-Just open **`app/data.tsx`**:
-
-```typescript
-export const personalInfo = {
-  name: "My New Name",
-  title: "Senior Developer",
-  // ...
-};
-
-export const projects = [
-  // Add new projects here...
-];
-```
-
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
+- **LinkedIn:** [Mohammed Abu-Shqear](https://www.linkedin.com/in/abushqear-dev/)
+- **GitHub:** [@abushqear-dev](https://github.com/abushqear-dev)
+- **Email:** m.abushqear.dev@gmail.com
