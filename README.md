@@ -1,5 +1,7 @@
 # Mohammed Abu-Shqear - Portfolio
 
+[**🌐 Visit Live Website**](https://your-custom-domain.com)
+
 Welcome to my personal portfolio source code! This project is a showcase of my skills as a Full-Stack Developer, built with a focus on clean architecture, performance, and best practices.
 
 ## 🚀 Built With
@@ -18,12 +20,7 @@ This isn't just a static template. It's engineered to be scalable and maintainab
     - Content is decoupled from UI components.
     - All personal data lives in `app/data.tsx`, making updates instant without touching JSX.
 
-2.  **Optimized Performance:**
-
-    - Zero client-side JavaScript for static content (Server Components by default).
-    - Fonts are optimized using `next/font` with CSS variables to prevent layout shift.
-
-3.  **Responsive Design:**
+2.  **Responsive Design:**
     - Fluid layout that transforms from a single column (Mobile) to a split-screen dashboard (Desktop).
 
 ## 📂 Project Structure
@@ -31,38 +28,22 @@ This isn't just a static template. It's engineered to be scalable and maintainab
 ```bash
 ├── app/
 │   ├── data.tsx        # Single source of truth for Bio, Projects, and Experience
-│   ├── layout.tsx      # Global font and metadata configuration
-│   ├── page.tsx        # Main UI rendering engine
-│   └── globals.css     # Tailored utilities (e.g., scrollbar hiding)
-├── public/             # Static assets (Images)
-└── README.md           # You are here
+│   ├── layout.tsx
+│   ├── page.tsx
+│   └── globals.css
+├── public/
+└── README.md
 ```
 
-## 🏃‍♂️ Getting Started
+## 🚀 Deployment
 
-Want to run this locally?
+This portfolio is optimized for deployment on Vercel.
 
-1.  **Clone the repo:**
+1.  **Framework:** Next.js App Router
+2.  **Platform:** Vercel (Recommended)
+3.  **Build Command:** `next build`
 
-    ```bash
-    git clone https://github.com/abushqear-dev/my-portfolio.git
-    cd my-portfolio
-    ```
-
-2.  **Install dependencies:**
-
-    ```bash
-    npm install
-    ```
-
-3.  **Run the development server:**
-    ```bash
-    npm run dev
-    ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-## � Contact
+## Contact
 
 - **LinkedIn:** [Mohammed Abu-Shqear](https://www.linkedin.com/in/abushqear-dev/)
 - **GitHub:** [@abushqear-dev](https://github.com/abushqear-dev)
