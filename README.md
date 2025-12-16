@@ -13,8 +13,6 @@ Welcome to my personal portfolio source code! This project is a showcase of my s
 
 ## 🛠️ Engineering Highlights
 
-This isn't just a static template. It's engineered to be scalable and maintainable:
-
 1.  **Separation of Concerns:**
 
     - Content is decoupled from UI components.
@@ -34,14 +32,6 @@ This isn't just a static template. It's engineered to be scalable and maintainab
 ├── public/
 └── README.md
 ```
-
-## 🚀 Deployment
-
-This portfolio is optimized for deployment on Vercel.
-
-1.  **Framework:** Next.js App Router
-2.  **Platform:** Vercel (Recommended)
-3.  **Build Command:** `next build`
 
 ## Contact
 
