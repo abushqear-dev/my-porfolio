@@ -13,7 +13,7 @@ export default function Home() {
       <section className="w-full lg:w-1/3 flex flex-col items-center justify-center p-8 lg:border-r lg:border-black shrink-0">
         <div className="space-y-6 text-center">
             <div className="h-48 w-48 rounded-full bg-gray-300 mx-auto overflow-hidden relative border-2 border-black">
-              <Image src="./my-photo.jpeg" alt={`${personalInfo.name} profile photo`} fill className="object-cover" />
+              <Image src="./images/my-photo.jpeg" alt={`${personalInfo.name} profile photo`} fill className="object-cover" />
             </div>
             
             <div className="space-y-2">
