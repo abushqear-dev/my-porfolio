@@ -18,7 +18,12 @@ export default function Home() {
             
             <div className="space-y-2">
                 <h1 className={`text-4xl lg:text-5xl font-bold ${monoFont} tracking-tight`}>{personalInfo.name}</h1>
-                <p className={`text-lg lg:text-xl ${monoFont} opacity-80`}>{personalInfo.title}</p>
+                <div className="flex items-center justify-center gap-3 opacity-80">
+                  <p className={`text-lg lg:text-xl ${monoFont}`}>{personalInfo.title}</p>
+                  <span className={`text-xs font-mono bg-gray-200/50 px-2 py-0.5 rounded-full text-gray-600`}>
+                    v{personalInfo.version}
+                  </span>
+                </div>
             </div>
 
             <div className="pt-4 flex flex-col gap-4 opacity-70">
