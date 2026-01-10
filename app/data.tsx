@@ -9,7 +9,7 @@ export const personalInfo = {
     linkedin: "https://www.linkedin.com/in/abushqear-dev/",
     github: "https://github.com/abushqear-dev"
   },
-  version: "1.0.0"
+  version: "2.0.0"
 };
 
 export const projects = [
@@ -23,6 +23,18 @@ export const projects = [
       "Created and designed promotional materials, including the official game poster.",
       "Played a key role in the project management.",
       "Designed a whole level."
+    ]
+  },
+  {
+    title: "Anjez",
+    link: "",
+    period: "2025 December - Present",
+    description: "Web-based task management application to help users organize, track, and manage tasks efficiently.",
+    points: [
+      "Developing the frontend using Next.js, React, TypeScript, and Tailwind CSS with a focus on performance and usability",
+      "Designing the full UI/UX in Figma.",
+      "Implementing backend functionality using Node.js, Express.js, Prisma ORM, and PostgreSQL",
+      "..."
     ]
   }
 ];
@@ -40,8 +52,9 @@ export const experience = [
 ];
 
 export const skills = {
-  frontend: "HTML & CSS, TypeScript, JavaScript, React.js, Next.js, Tailwind CSS, TanStack Query.",
-  backend: "Node.js, Express.js, PostgreSQL, Prisma.",
-  tools: "Figma, VS Code, Postman, Git & GitHub.",
-  soft: "Collaboration & Communication, Fast Learning & Adaptability, Problem Solving, Time Management."
+  frontend: "HTML & CSS, TypeScript, JavaScript, React.js, Next.js, Tailwind CSS, TanStack Query",
+  backend: "Node.js, Express.js, PostgreSQL, Prisma, PostgreSQL",
+  tools: "Figma, VS Code, Postman, Git & GitHub, Docker",
+  soft: "Collaboration & Communication, Fast Learning & Adaptability, Problem Solving, Time Management",
+  other: "Godot, Unity"
 };
