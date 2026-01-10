@@ -29,12 +29,12 @@ export const projects = [
 
 export const experience = [
   {
-    title: "Freelance Translator",
-    company: "Trek Medics International",
-    period: "2023 June - 2025 January",
+    title: "",
+    company: "",
+    period: "",
     points: [
-      "Translated Beacon platform content into Arabic, ensuring accurate and culturally appropriate translations.",
-      "Conducted thorough testing to ensure the translations were accurate and culturally appropriate."
+      "",
+      ""
     ]
   }
 ];
