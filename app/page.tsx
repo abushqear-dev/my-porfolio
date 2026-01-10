@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { personalInfo, projects, experience, skills } from "./data";
-import { ThemeToggle } from "@/components/theme-toggle";
+import { ThemeToggle } from "@/components/theme-toggle-wrapper";
 
 const splitList = (value: string) =>
   value
