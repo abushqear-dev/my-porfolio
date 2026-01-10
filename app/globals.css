@@ -3,41 +3,132 @@
 @theme {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-border: var(--border);
-  --color-muted: var(--muted);
   --color-heading: var(--heading);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-accent: var(--accent);
+  --color-accent-2: var(--accent-2);
 }
 
 :root {
-  --background: #fffdf4;
-  --foreground: #2e2e2e;
-  --heading: #000000;
-  --border: #e5e5e0;
-  --muted: #666666;
+  --background: #f7f1e9;
+  --foreground: #2b2620;
+  --heading: #17130f;
+  --muted: #6b6156;
+  --border: #e1d6c8;
+  --surface: #fff8f0;
+  --surface-2: #f1e7d9;
+  --accent: #d07a3a;
+  --accent-2: #2a6f73;
+  --accent-glow: #d07a3a2b;
+  --accent-2-glow: #2a6f7330;
 }
 
 .dark {
-  --background: #0f0f0c;
-  --foreground: #8b8b7f;
-  --heading: #ffffff;
-  --border: #2a2a24;
-  --muted: #5a5a52;
+  --background: #0f1112;
+  --foreground: #c7c0b7;
+  --heading: #f4ede3;
+  --muted: #8a8177;
+  --border: #2a3136;
+  --surface: #161a1d;
+  --surface-2: #1c2327;
+  --accent: #d38b4a;
+  --accent-2: #3a8b8f;
+  --accent-glow: #d38b4a24;
+  --accent-2-glow: #3a8b8f24;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background-color: var(--background);
   color: var(--foreground);
+  background-image:
+    radial-gradient(1200px 600px at 12% -10%, var(--accent-glow), transparent 60%),
+    radial-gradient(900px 520px at 110% 20%, var(--accent-2-glow), transparent 60%);
+  background-attachment: fixed;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--background);
+}
+
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes float-slow {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }
 
 @layer utilities {
   .scrollbar-hide {
-    /* Chrome, Safari and Opera */
-    &::-webkit-scrollbar {
-      display: none;
-    }
-    /* IE and Edge */
     -ms-overflow-style: none;
-    /* Firefox */
     scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  .animate-fade-up {
+    animation: fade-up 0.7s ease both;
+  }
+
+  .animate-fade-in {
+    animation: fade-in 0.8s ease both;
+  }
+
+  .animate-float {
+    animation: float-slow 6s ease-in-out infinite;
+  }
+
+  .animate-delay-100 {
+    animation-delay: 100ms;
+  }
+
+  .animate-delay-200 {
+    animation-delay: 200ms;
+  }
+
+  .animate-delay-300 {
+    animation-delay: 300ms;
+  }
+
+  .animate-delay-450 {
+    animation-delay: 450ms;
   }
 }
