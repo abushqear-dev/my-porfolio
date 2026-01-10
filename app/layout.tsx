@@ -1,5 +1,6 @@
 import { IBM_Plex_Mono, IBM_Plex_Sans } from "next/font/google";
 import type { Metadata } from "next";
+import { ThemeProvider } from "@/components/providers";
 import "./globals.css";
 
 const ibmPlexMono = IBM_Plex_Mono({ 
@@ -28,7 +29,14 @@ export default function RootLayout({
       <body
         className={`antialiased ${ibmPlexSans.className} ${ibmPlexMono.variable}`}
       >
-        {children}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
