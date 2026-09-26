@@ -18,7 +18,7 @@ const jetbrains = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: "Mohammed Abu-Shqear",
-  description: "Mohammed Abu-Shqear - Full-Stack Developer",
+  description: "Mohammed Abu-Shqear - Software Engineer",
 };
 
 export default function RootLayout({

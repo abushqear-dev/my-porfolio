@@ -24,9 +24,12 @@ export default function Home() {
   const skillGroups = [
     { title: "Frontend", items: splitList(skills.frontend) },
     { title: "Backend", items: splitList(skills.backend) },
-    { title: "Tools", items: splitList(skills.tools) },
+    { title: "APIs & Tools", items: splitList(skills.apisTools) },
+    { title: "Databases & ORMs", items: splitList(skills.databases) },
+    { title: "Game Development", items: splitList(skills.gameDev) },
+    { title: "AI", items: splitList(skills.ai) },
+    { title: "Production", items: splitList(skills.production) },
     { title: "Soft skills", items: splitList(skills.soft) },
-    { title: "Other", items: splitList(skills.other) },
   ];
 
   return (
