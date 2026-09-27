@@ -213,9 +213,6 @@ export function Sidebar() {
         <Link href="/#skills" className="transition hover:text-heading">
           Skills
         </Link>
-        <Link href="/blog" className="transition hover:text-heading">
-          Blog
-        </Link>
       </nav>
 
       <div className="flex flex-wrap gap-3">

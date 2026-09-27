@@ -1,6 +1,4 @@
 
-import Link from "next/link";
-import { ArrowRight } from "lucide-react";
 import { projects, experience, skills } from "./data";
 import { Sidebar } from "@/components/sidebar";
 
@@ -58,15 +56,6 @@ export default function Home() {
                   Projects
                 </h2>
               </div>
-              <Link
-                href="/blog"
-                className="group flex items-center gap-2 text-sm font-medium text-muted transition hover:text-accent"
-              >
-                <span className={`uppercase tracking-[0.2em] ${monoFont}`}>
-                  Blog
-                </span>
-                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </Link>
             </header>
 
             <div className="grid gap-6">
