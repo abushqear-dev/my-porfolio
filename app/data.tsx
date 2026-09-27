@@ -59,8 +59,8 @@ export const projects = [
     points: [
       "Built an adaptive-difficulty learning system that gamifies programming education based on user career interests.",
       "Collaborated on game mechanics and learning flow to improve player retention.",
-      "Designed and implemented a complete game level using Figma and Unity.",
-      "Designed and made the promotional materials of the game, including the official game poster."
+      "Took a complete game level from Figma mockups to a playable Unity build.",
+      "Created the game's promotional materials, including the official poster."
     ]
   },
   {
@@ -70,7 +70,7 @@ export const projects = [
     description: "A 3D multiplayer game built in Godot with Blender-integrated assets.",
     points: [
       "Developed an online multiplayer system, allowing players to host or join rooms via IP and port.",
-      "Designed and implemented the core game mechanics.",
+      "Built the core gameplay mechanics from scratch.",
       "Imported, configured, and integrated 3D assets (Blender) within Godot."
     ]
   },
