@@ -86,7 +86,7 @@ export default function Home() {
                     <ul className="space-y-2 text-sm text-foreground/80">
                       {project.points.map((point, index) => (
                         <li key={`${project.title}-point-${index}`} className="flex gap-3">
-                          <span className="mt-2 h-1.5 w-1.5 rounded-full bg-accent" />
+                          <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
                           {point}
                         </li>
                       ))}
@@ -143,7 +143,7 @@ export default function Home() {
                               key={`${exp.title}-point-${pointIndex}`}
                               className="flex gap-3"
                             >
-                              <span className="mt-2 h-1.5 w-1.5 rounded-full bg-accent" />
+                              <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
                               {point}
                             </li>
                           ))}
