@@ -3,14 +3,12 @@ export const personalInfo = {
   title: "Software Engineer",
   bio: "Software Engineer with full-stack experience (React, Next.js, Node.js, PostgreSQL) and a background in game development (Unity, Godot). Co-Founder of BURAQ Games Studio, where I combine hands-on engineering and UI/UX design with building the studio's culture, processes, and internal tools.",
   phone: "+962 78 974 5350",
-  email: "m.abusqear.dev@gmail.com",
+  email: "m.abushqear.dev@gmail.com",
   location: "Amman, Jordan",
   links: {
     linkedin: "https://www.linkedin.com/in/abushqear-dev/",
     github: "https://github.com/abushqear-dev"
   },
-  // TODO: drop the real PDF at public/resume.pdf (any filename works, just
-  // keep this path in sync) — the sidebar button below links here.
   resumeUrl: "/resume.pdf",
   version: "2.1.0"
 };
