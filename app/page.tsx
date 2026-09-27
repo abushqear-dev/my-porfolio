@@ -1,5 +1,5 @@
 
-import { projects, experience, skills } from "./data";
+import { personalInfo, projects, experience, skills } from "./data";
 import { Sidebar } from "@/components/sidebar";
 
 const splitList = (value: string) =>
@@ -32,6 +32,28 @@ export default function Home() {
 
   return (
     <main className="relative min-h-screen w-full overflow-hidden bg-background text-foreground">
+      <nav
+        aria-label="Quick navigation"
+        className={`sticky top-0 z-30 flex items-center justify-between gap-4 border-b border-border/60 bg-background/90 px-6 py-3 backdrop-blur-sm lg:hidden ${monoFont}`}
+      >
+        <span className="text-xs uppercase tracking-[0.3em] text-heading">
+          {personalInfo.name.split(" ")[0]}
+        </span>
+        <div className="flex gap-4 text-[11px] uppercase tracking-[0.25em] text-muted">
+          <a href="#projects" className="transition hover:text-heading">
+            Projects
+          </a>
+          {experienceItems.length > 0 && (
+            <a href="#experience" className="transition hover:text-heading">
+              Experience
+            </a>
+          )}
+          <a href="#skills" className="transition hover:text-heading">
+            Skills
+          </a>
+        </div>
+      </nav>
+
       <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
         <div className="absolute -left-24 -top-24 h-[420px] w-[420px] rounded-full bg-accent/20 blur-[120px] animate-float motion-reduce:animate-none" />
         <div className="absolute -bottom-48 right-[-120px] h-[520px] w-[520px] rounded-full bg-accent-2/20 blur-[160px] animate-float animate-delay-300 motion-reduce:animate-none" />
