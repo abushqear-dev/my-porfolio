@@ -9,6 +9,9 @@ export const personalInfo = {
     linkedin: "https://www.linkedin.com/in/abushqear-dev/",
     github: "https://github.com/abushqear-dev"
   },
+  // TODO: drop the real PDF at public/resume.pdf (any filename works, just
+  // keep this path in sync) — the sidebar button below links here.
+  resumeUrl: "/resume.pdf",
   version: "2.1.0"
 };
 
