@@ -155,7 +155,8 @@ export function Sidebar() {
               {personalInfo.name}
             </h1>
             <span
-              className={`rounded-full border border-border/60 bg-surface-2/80 px-3 py-1 text-[10px] uppercase tracking-[0.3em] text-muted ${monoFont}`}
+              title="Portfolio site build version"
+              className={`hidden rounded-full border border-border/60 bg-surface-2/80 px-3 py-1 text-[10px] uppercase tracking-[0.3em] text-muted sm:inline-flex ${monoFont}`}
             >
               v{personalInfo.version}
             </span>
