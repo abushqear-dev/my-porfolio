@@ -1,5 +1,5 @@
 
-import { projects, experience, skills } from "./data";
+import { personalInfo, projects, experience, skills } from "./data";
 import { Sidebar } from "@/components/sidebar";
 
 const splitList = (value: string) =>
@@ -10,6 +10,7 @@ const splitList = (value: string) =>
 
 export default function Home() {
   const monoFont = "font-[family-name:var(--font-mono)]";
+  const currentYear = new Date().getFullYear();
 
   const experienceItems = experience.filter(
     (item) =>
@@ -31,7 +32,10 @@ export default function Home() {
   ];
 
   return (
-    <main className="relative min-h-screen w-full overflow-hidden bg-background text-foreground">
+    <main
+      id="top"
+      className="relative min-h-screen w-full overflow-hidden bg-background text-foreground"
+    >
       <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
         <div className="absolute -left-24 -top-24 h-[420px] w-[420px] rounded-full bg-accent/20 blur-[120px] animate-float motion-reduce:animate-none" />
         <div className="absolute -bottom-48 right-[-120px] h-[520px] w-[520px] rounded-full bg-accent-2/20 blur-[160px] animate-float animate-delay-300 motion-reduce:animate-none" />
@@ -197,6 +201,28 @@ export default function Home() {
               ))}
             </div>
           </section>
+
+          <footer className="flex flex-col items-center gap-5 border-t border-border/60 pt-10 text-center animate-fade-up animate-delay-200 motion-reduce:animate-none">
+            <p className="text-sm text-muted">
+              Have a project in mind?{" "}
+              <a
+                href={`mailto:${personalInfo.email}`}
+                className="text-accent underline-offset-4 hover:underline"
+              >
+                Let&apos;s talk
+              </a>
+              .
+            </p>
+            <a
+              href="#top"
+              className={`inline-flex items-center gap-2 rounded-full border border-border/60 bg-surface/70 px-4 py-2 text-xs uppercase tracking-[0.25em] text-muted transition hover:border-accent/60 hover:text-heading ${monoFont}`}
+            >
+              Back to top ↑
+            </a>
+            <p className={`text-xs text-muted ${monoFont}`}>
+              © {currentYear} {personalInfo.name}. Built with Next.js &amp; Tailwind CSS.
+            </p>
+          </footer>
         </div>
       </div>
     </main>
