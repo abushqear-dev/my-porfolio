@@ -1,6 +1,7 @@
 
 import { personalInfo, projects, experience, skills } from "./data";
 import { Sidebar } from "@/components/sidebar";
+import { ProjectGallery } from "@/components/project-gallery";
 
 const splitList = (value: string) =>
   value
@@ -117,6 +118,9 @@ export default function Home() {
                         </li>
                       ))}
                     </ul>
+                    {project.screenshots && project.screenshots.length > 0 && (
+                      <ProjectGallery images={project.screenshots} title={project.title} />
+                    )}
                   </div>
                 </article>
               ))}

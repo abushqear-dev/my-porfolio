@@ -13,7 +13,21 @@ export const personalInfo = {
   version: "2.1.0"
 };
 
-export const projects = [
+export type ProjectScreenshot = {
+  src: string;
+  alt: string;
+};
+
+export type Project = {
+  title: string;
+  link: string;
+  period: string;
+  description: string;
+  points: string[];
+  screenshots?: ProjectScreenshot[];
+};
+
+export const projects: Project[] = [
   {
     title: "Wastons Gone",
     link: "",
@@ -47,6 +61,12 @@ export const projects = [
       "Implementing backend functionality using Node.js, Express.js, Prisma ORM, and PostgreSQL.",
       "Designing the full UI/UX in Figma.",
       "Used Claude Code and Codex to accelerate prototyping and iteration across the frontend and backend."
+    ],
+    screenshots: [
+      { src: "/screenshots/anjez/board-light.jpg", alt: "Anjez task board, light theme" },
+      { src: "/screenshots/anjez/board-dark.jpg", alt: "Anjez task board, dark theme" },
+      { src: "/screenshots/anjez/auth-light.jpg", alt: "Anjez sign in / register screen, light theme" },
+      { src: "/screenshots/anjez/auth-dark.jpg", alt: "Anjez sign in / register screen, dark theme" }
     ]
   },
   {
@@ -59,6 +79,12 @@ export const projects = [
       "Collaborated on game mechanics and learning flow to improve player retention.",
       "Took a complete game level from Figma mockups to a playable Unity build.",
       "Created the game's promotional materials, including the official poster."
+    ],
+    screenshots: [
+      { src: "/screenshots/codequest/poster.jpg", alt: "CodeQuest official poster artwork" },
+      { src: "/screenshots/codequest/main-menu.jpg", alt: "CodeQuest main menu screen" },
+      { src: "/screenshots/codequest/registration.jpg", alt: "CodeQuest terminal-style registration screen" },
+      { src: "/screenshots/codequest/news-updates.jpg", alt: "CodeQuest news and updates panel" }
     ]
   },
   {
@@ -77,7 +103,12 @@ export const projects = [
     link: "",
     period: "2025 May - 2025 July",
     description: "A news website designed to deliver timely and accurate content to readers.",
-    points: []
+    points: [],
+    screenshots: [
+      { src: "/screenshots/al-hakika/article-light.jpg", alt: "Al-Hakika article page, light theme" },
+      { src: "/screenshots/al-hakika/article-dark.jpg", alt: "Al-Hakika article page, dark theme" },
+      { src: "/screenshots/al-hakika/auth.jpg", alt: "Al-Hakika sign in / register screen" }
+    ]
   }
 ];
 
