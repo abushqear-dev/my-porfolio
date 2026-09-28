@@ -92,23 +92,23 @@ export default function Home() {
                   className="group rounded-2xl border border-border/70 bg-surface/70 p-6 shadow-[0_20px_60px_rgba(0,0,0,0.08)] transition hover:-translate-y-1 hover:border-accent/60 hover:bg-surface"
                 >
                   <div className="flex flex-col gap-4">
-                    <div className="flex flex-col gap-2 lg:flex-row lg:items-center lg:justify-between">
+                    <div className="flex flex-col gap-2 lg:flex-row lg:flex-wrap lg:items-start lg:justify-between">
                       {project.link ? (
                         <a
                           href={project.link}
                           target="_blank"
                           rel="noreferrer"
-                          className="text-2xl font-semibold text-heading transition group-hover:text-accent"
+                          className="min-w-0 text-2xl font-semibold text-heading transition group-hover:text-accent"
                         >
                           {project.title}
                         </a>
                       ) : (
-                        <span className="text-2xl font-semibold text-heading">
+                        <span className="min-w-0 text-2xl font-semibold text-heading">
                           {project.title}
                         </span>
                       )}
                       <span
-                        className={`text-xs uppercase tracking-[0.3em] text-muted ${monoFont}`}
+                        className={`shrink-0 whitespace-nowrap text-xs uppercase tracking-[0.3em] text-muted ${monoFont}`}
                       >
                         {project.period}
                       </span>
@@ -161,12 +161,12 @@ export default function Home() {
                     className="rounded-2xl border border-border/70 bg-surface/70 p-6 shadow-[0_20px_60px_rgba(0,0,0,0.08)]"
                   >
                     <div className="flex flex-col gap-3">
-                      <div className="flex flex-col gap-2 lg:flex-row lg:items-center lg:justify-between">
-                        <h3 className="text-xl font-semibold text-heading">
+                      <div className="flex flex-col gap-2 lg:flex-row lg:flex-wrap lg:items-start lg:justify-between">
+                        <h3 className="min-w-0 text-xl font-semibold text-heading">
                           {exp.title} {exp.company && "-"} {exp.company}
                         </h3>
                         <span
-                          className={`text-xs uppercase tracking-[0.3em] text-muted ${monoFont}`}
+                          className={`shrink-0 whitespace-nowrap text-xs uppercase tracking-[0.3em] text-muted ${monoFont}`}
                         >
                           {exp.period}
                         </span>
