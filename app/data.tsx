@@ -52,6 +52,17 @@ export const projects: Project[] = [
     ]
   },
   {
+    title: "HEXYBER (3D)",
+    link: "",
+    period: "2026 January - 2026 April",
+    description: "A 3D multiplayer game built in Godot with Blender-integrated assets.",
+    points: [
+      "Developed an online multiplayer system, allowing players to host or join rooms via IP and port.",
+      "Built the core gameplay mechanics from scratch.",
+      "Imported, configured, and integrated 3D assets (Blender) within Godot."
+    ]
+  },
+  {
     title: "Anjez",
     link: "",
     period: "2025 December - 2026 January",
@@ -70,6 +81,22 @@ export const projects: Project[] = [
     ]
   },
   {
+    title: "Al-Hakika",
+    link: "",
+    period: "2025 May - 2025 July",
+    description: "A news website designed to deliver timely and accurate content to readers.",
+    points: [
+      "Built the article reading experience and authentication flow (sign in / register) with light and dark themes.",
+      "Focused the UI on fast scanning and readability for timely news content.",
+      "Designed and implemented both the light and dark visual themes end-to-end."
+    ],
+    screenshots: [
+      { src: "/screenshots/al-hakika/article-light.jpg", alt: "Al-Hakika article page, light theme" },
+      { src: "/screenshots/al-hakika/article-dark.jpg", alt: "Al-Hakika article page, dark theme" },
+      { src: "/screenshots/al-hakika/auth.jpg", alt: "Al-Hakika sign in / register screen" }
+    ]
+  },
+  {
     title: "CodeQuest",
     link: "https://github.com/abushqear-dev/CodeQuest",
     period: "2024 February - 2024 June",
@@ -85,29 +112,6 @@ export const projects: Project[] = [
       { src: "/screenshots/codequest/main-menu.jpg", alt: "CodeQuest main menu screen" },
       { src: "/screenshots/codequest/registration.jpg", alt: "CodeQuest terminal-style registration screen" },
       { src: "/screenshots/codequest/news-updates.jpg", alt: "CodeQuest news and updates panel" }
-    ]
-  },
-  {
-    title: "HEXYBER (3D)",
-    link: "",
-    period: "2026 January - 2026 April",
-    description: "A 3D multiplayer game built in Godot with Blender-integrated assets.",
-    points: [
-      "Developed an online multiplayer system, allowing players to host or join rooms via IP and port.",
-      "Built the core gameplay mechanics from scratch.",
-      "Imported, configured, and integrated 3D assets (Blender) within Godot."
-    ]
-  },
-  {
-    title: "Al-Hakika",
-    link: "",
-    period: "2025 May - 2025 July",
-    description: "A news website designed to deliver timely and accurate content to readers.",
-    points: [],
-    screenshots: [
-      { src: "/screenshots/al-hakika/article-light.jpg", alt: "Al-Hakika article page, light theme" },
-      { src: "/screenshots/al-hakika/article-dark.jpg", alt: "Al-Hakika article page, dark theme" },
-      { src: "/screenshots/al-hakika/auth.jpg", alt: "Al-Hakika sign in / register screen" }
     ]
   }
 ];

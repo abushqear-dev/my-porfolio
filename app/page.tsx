@@ -93,14 +93,20 @@ export default function Home() {
                 >
                   <div className="flex flex-col gap-4">
                     <div className="flex flex-col gap-2 lg:flex-row lg:items-center lg:justify-between">
-                      <a
-                        href={project.link}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="text-2xl font-semibold text-heading transition group-hover:text-accent"
-                      >
-                        {project.title}
-                      </a>
+                      {project.link ? (
+                        <a
+                          href={project.link}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="text-2xl font-semibold text-heading transition group-hover:text-accent"
+                        >
+                          {project.title}
+                        </a>
+                      ) : (
+                        <span className="text-2xl font-semibold text-heading">
+                          {project.title}
+                        </span>
+                      )}
                       <span
                         className={`text-xs uppercase tracking-[0.3em] text-muted ${monoFont}`}
                       >
