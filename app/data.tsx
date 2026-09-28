@@ -10,7 +10,7 @@ export const personalInfo = {
     github: "https://github.com/abushqear-dev"
   },
   resumeUrl: "/resume.pdf",
-  version: "2.1.0"
+  version: "2.2.0"
 };
 
 export type ProjectScreenshot = {
