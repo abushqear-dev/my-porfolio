@@ -170,7 +170,7 @@ export function Sidebar() {
         </p>
         <a
           href={personalInfo.resumeUrl}
-          download
+          download="Mohammed-Abu-Shqear-CV.pdf"
           className={`inline-flex items-center gap-2 rounded-full bg-accent px-5 py-2.5 text-xs font-medium uppercase tracking-[0.25em] text-background transition hover:bg-accent/90 ${monoFont}`}
         >
           <svg
