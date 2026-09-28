@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 import Image from "next/image";
 import type { ProjectScreenshot } from "@/app/data";
 
@@ -44,29 +45,8 @@ export function ProjectGallery({
 
   if (images.length === 0) return null;
 
-  return (
-    <>
-      <div className="flex gap-3 overflow-x-auto pb-1">
-        {images.map((image, index) => (
-          <button
-            key={image.src}
-            type="button"
-            onClick={() => setOpenIndex(index)}
-            className="group/thumb relative h-20 w-28 shrink-0 overflow-hidden rounded-lg border border-border/60 bg-surface-2 transition hover:border-accent/60"
-            aria-label={`Open screenshot ${index + 1} of ${images.length} for ${title}`}
-          >
-            <Image
-              src={image.src}
-              alt={image.alt}
-              fill
-              sizes="112px"
-              className="object-cover transition group-hover/thumb:scale-105"
-            />
-          </button>
-        ))}
-      </div>
-
-      {openIndex !== null && (
+  const lightbox = openIndex !== null && typeof document !== "undefined"
+    ? createPortal(
         <div
           role="dialog"
           aria-modal="true"
@@ -127,8 +107,34 @@ export function ProjectGallery({
           <p className="absolute bottom-4 left-1/2 -translate-x-1/2 text-xs uppercase tracking-[0.25em] text-white/70">
             {openIndex + 1} / {images.length}
           </p>
-        </div>
-      )}
+        </div>,
+        document.body
+      )
+    : null;
+
+  return (
+    <>
+      <div className="flex gap-3 overflow-x-auto pb-1">
+        {images.map((image, index) => (
+          <button
+            key={image.src}
+            type="button"
+            onClick={() => setOpenIndex(index)}
+            className="group/thumb relative h-20 w-28 shrink-0 overflow-hidden rounded-lg border border-border/60 bg-surface-2 transition hover:border-accent/60"
+            aria-label={`Open screenshot ${index + 1} of ${images.length} for ${title}`}
+          >
+            <Image
+              src={image.src}
+              alt={image.alt}
+              fill
+              sizes="112px"
+              className="object-cover transition group-hover/thumb:scale-105"
+            />
+          </button>
+        ))}
+      </div>
+
+      {lightbox}
     </>
   );
 }
